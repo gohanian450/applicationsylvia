@@ -2,7 +2,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --red: #C0001E;
+  --red: #F0B300;
   --dark: #111111;
   --grey: #1e1e1e;
   --light-grey: #f5f5f5;
@@ -103,7 +103,7 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-.lang-toggle:hover { background: #a0001a; }
+.lang-toggle:hover { background: #c99200; }
 
 .hamburger {
   display: none;
@@ -229,10 +229,10 @@ h2 {
 
 .btn-primary {
   background: var(--red);
-  color: var(--white);
+  color: var(--dark);
 }
 
-.btn-primary:hover { background: #a0001a; transform: translateY(-1px); }
+.btn-primary:hover { background: #c99200; transform: translateY(-1px); }
 
 .btn-outline {
   border: 2px solid var(--white);
@@ -411,7 +411,7 @@ h2 {
   border-radius: 5px;
   transition: background 0.2s !important;
 }
-.nav-book:hover { background: #a0001a !important; color: var(--white) !important; }
+.nav-book:hover { background: #c99200 !important; color: var(--white) !important; }
 
 /* Booking form */
 .booking-form { display: flex; flex-direction: column; gap: 20px; }
