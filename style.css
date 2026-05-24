@@ -344,10 +344,13 @@ h2::after {
 
 .card:hover::after { opacity: 1; }
 
-.card-icon {
-  font-size: 2rem;
+.card-num {
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--red);
+  letter-spacing: 3px;
   margin-bottom: 20px;
-  display: block;
+  opacity: 0.6;
 }
 
 .card h3 {
@@ -480,8 +483,6 @@ h2::after {
 }
 
 .contact-icon {
-  font-size: 1.3rem;
-  margin-top: 2px;
   width: 40px;
   height: 40px;
   background: rgba(255,255,255,0.05);
@@ -491,6 +492,7 @@ h2::after {
   justify-content: center;
   flex-shrink: 0;
   border: 1px solid rgba(255,255,255,0.08);
+  color: var(--gold);
 }
 
 .contact-item strong {
@@ -590,7 +592,7 @@ h2::after {
   border-top: 3px solid var(--red);
 }
 
-.modal-icon { font-size: 2.8rem; margin-bottom: 20px; }
+.modal-icon { margin-bottom: 20px; display: flex; justify-content: center; }
 .modal-box h3 {
   font-size: 1.3rem;
   font-weight: 900;
