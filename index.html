@@ -123,119 +123,32 @@
   <section class="booking section" id="booking">
     <div class="container">
       <h2 data-fr="Prendre un rendez-vous" data-en="Book an Appointment">Prendre un rendez-vous</h2>
-      <p class="section-sub" data-fr="Choisissez votre méthode, sélectionnez une date et remplissez vos informations." data-en="Choose your method, select a date and fill in your information.">
-        Choisissez votre méthode, sélectionnez une date et remplissez vos informations.
+      <p class="section-sub" data-fr="Remplissez le formulaire et nous vous contacterons pour confirmer votre rendez-vous." data-en="Fill out the form and we will contact you to confirm your appointment.">
+        Remplissez le formulaire et nous vous contacterons pour confirmer votre rendez-vous.
       </p>
 
-      <div class="booking-grid">
+      <div class="booking-simple">
+        <div class="book-step">
+          <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
 
-        <!-- LEFT COLUMN -->
-        <div class="booking-left">
-
-          <!-- STEP 1: METHOD -->
-          <div class="book-step">
-            <h3 class="step-title" data-fr="1. Sélectionner une méthode" data-en="1. Select A Method">1. Sélectionner une méthode</h3>
-            <div class="method-cards">
-              <div class="method-card" id="method-location" onclick="selectMethod('location')">
-                <span class="method-icon">📍</span>
-                <div>
-                  <strong data-fr="Sur place" data-en="On Location">Sur place</strong>
-                  <p data-fr="Rendez-vous à notre atelier." data-en="Appointment at the supplier location.">Rendez-vous à notre atelier.</p>
-                </div>
-              </div>
-              <div class="method-card" id="method-photo" onclick="selectMethod('photo')">
-                <span class="method-icon">📷</span>
-                <div>
-                  <strong data-fr="Évaluation par photo" data-en="Photo Appraisal">Évaluation par photo</strong>
-                  <p data-fr="Vous recevrez une invitation par courriel pour soumettre vos photos." data-en="You will receive an email invitation to guide you in submitting pictures.">Vous recevrez une invitation par courriel pour soumettre vos photos.</p>
-                </div>
-              </div>
+            <div class="form-group">
+              <label data-fr="Nom *" data-en="Name *">Nom *</label>
+              <input type="text" id="f-name" required placeholder="Jean Tremblay" />
             </div>
-          </div>
 
-          <!-- STEP 2: CALENDAR -->
-          <div class="book-step">
-            <h3 class="step-title" data-fr="2. Sélectionner une date" data-en="2. Select A Date">2. Sélectionner une date</h3>
-            <div class="calendar-wrap">
-              <div class="cal-header">
-                <button class="cal-nav" onclick="prevMonth()">&#8592;</button>
-                <span id="cal-title"></span>
-                <button class="cal-nav" onclick="nextMonth()">&#8594;</button>
-              </div>
-              <div class="cal-grid" id="cal-grid"></div>
+            <div class="form-group">
+              <label data-fr="Courriel *" data-en="Email *">Courriel *</label>
+              <input type="email" id="f-email" required placeholder="exemple@email.com" />
             </div>
-          </div>
 
-          <!-- STEP 3: TIME SLOTS -->
-          <div class="book-step">
-            <h3 class="step-title" data-fr="3. Sélectionner une heure" data-en="3. Select A Time">3. Sélectionner une heure</h3>
-            <p class="time-hint" id="time-hint" data-fr="Veuillez d'abord sélectionner une date." data-en="You must select a date first.">Veuillez d'abord sélectionner une date.</p>
-            <div class="time-slots" id="time-slots"></div>
-          </div>
+            <div class="form-group">
+              <label data-fr="Téléphone *" data-en="Phone *">Téléphone *</label>
+              <input type="tel" id="f-phone" required placeholder="514-000-0000" />
+            </div>
 
+            <button type="submit" class="btn btn-primary btn-full" data-fr="Envoyer la demande" data-en="Send Request">Envoyer la demande</button>
+          </form>
         </div>
-
-        <!-- RIGHT COLUMN: FORM -->
-        <div class="booking-right">
-          <div class="book-step">
-            <h3 class="step-title" data-fr="4. Vos informations" data-en="4. Your Contact Info">4. Vos informations</h3>
-            <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label data-fr="Nom *" data-en="My name *">Nom *</label>
-                  <input type="text" id="f-name" required placeholder="Jean Tremblay" />
-                </div>
-                <div class="form-group">
-                  <label data-fr="Véhicule *" data-en="My vehicle *">Véhicule *</label>
-                  <input type="text" id="f-vehicle" required placeholder="2020 Honda Civic" />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label data-fr="Courriel" data-en="My email">Courriel</label>
-                  <input type="email" id="f-email" placeholder="exemple@email.com" />
-                </div>
-                <div class="form-group">
-                  <label data-fr="Téléphone *" data-en="My phone *">Téléphone *</label>
-                  <input type="tel" id="f-phone" required placeholder="514-000-0000" />
-                </div>
-              </div>
-
-              <div class="form-check">
-                <input type="checkbox" id="f-sms" />
-                <label for="f-sms" data-fr="Autoriser les messages texte (cellulaire)." data-en="Allow text messages (cell phone).">Autoriser les messages texte (cellulaire).</label>
-              </div>
-
-              <div class="form-divider" data-fr="Informations d'assurance (optionnel)" data-en="Insurance Info (optional)">Informations d'assurance (optionnel)</div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label data-fr="Compagnie d'assurance" data-en="Insurance Co.">Compagnie d'assurance</label>
-                  <input type="text" id="f-insurance" placeholder="Ex: Intact, Desjardins..." />
-                </div>
-                <div class="form-group">
-                  <label data-fr="Numéro de police" data-en="Policy #">Numéro de police</label>
-                  <input type="text" id="f-policy" placeholder="POL-000000" />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label data-fr="Numéro de réclamation" data-en="Claim #">Numéro de réclamation</label>
-                <input type="text" id="f-claim" placeholder="CLM-000000" />
-              </div>
-
-              <div class="form-group">
-                <label data-fr="Commentaire" data-en="Comment">Commentaire</label>
-                <textarea id="f-comment" rows="4" placeholder="Décrivez les dommages ou ajoutez des détails..."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-full" data-fr="Confirmer le rendez-vous" data-en="Confirm Appointment">Confirmer le rendez-vous</button>
-            </form>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
