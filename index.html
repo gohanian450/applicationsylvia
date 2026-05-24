@@ -15,11 +15,14 @@
       <div class="logo">
         <img src="logo.png" alt="Crémazie Auto" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block'" />
         <span id="logo-text" class="logo-text" style="display:none;">Crémazie Auto</span>
+        <div class="nav-phone">
+          <span class="nav-phone-label" data-fr="Appelez ou écrivez-nous" data-en="Call or text us">Appelez ou écrivez-nous</span>
+          <a href="tel:5142742537" class="nav-phone-num">514-274-2537</a>
+        </div>
       </div>
       <nav class="nav-links">
         <a href="#services" data-fr="Services" data-en="Services">Services</a>
         <a href="#about" data-fr="À propos" data-en="About">À propos</a>
-        <a href="#booking" class="nav-book" data-fr="Rendez-vous" data-en="Book Now">Rendez-vous</a>
         <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
       </nav>
       <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">EN</button>
@@ -28,8 +31,8 @@
     <div class="mobile-menu" id="mobile-menu">
       <a href="#services" onclick="toggleMenu()" data-fr="Services" data-en="Services">Services</a>
       <a href="#about" onclick="toggleMenu()" data-fr="À propos" data-en="About">À propos</a>
-      <a href="#booking" onclick="toggleMenu()" data-fr="Rendez-vous" data-en="Book Now">Rendez-vous</a>
       <a href="#contact" onclick="toggleMenu()" data-fr="Contact" data-en="Contact">Contact</a>
+      <a href="tel:5142742537" onclick="toggleMenu()">514-274-2537</a>
     </div>
   </header>
 
@@ -41,38 +44,25 @@
       <!-- Texte gauche -->
       <div class="hero-content">
         <img src="logo.png" alt="Crémazie Auto" class="hero-logo" onerror="this.style.display='none'" />
-        <p class="hero-badge" data-fr="Plus de 50 ans d'expérience" data-en="Over 50 years of experience">Plus de 50 ans d'expérience</p>
         <h1 data-fr="Experts en carrosserie automobile" data-en="Auto Body Repair Experts">Experts en carrosserie automobile</h1>
-        <p class="hero-sub" data-fr="Réparation et peinture professionnelle depuis plus de 50 ans." data-en="Professional repair and painting for over 50 years.">
-          Réparation et peinture professionnelle depuis plus de 50 ans.
+        <p class="hero-sub" data-fr="Réparation et peinture professionnelle." data-en="Professional repair and painting.">
+          Réparation et peinture professionnelle.
         </p>
-        <a href="#services" class="btn btn-outline" data-fr="Nos services" data-en="Our Services">Nos services</a>
       </div>
 
-      <!-- Formulaire droite -->
+      <!-- Estimation rapide droite -->
       <div class="hero-form">
         <div class="hero-form-box">
-          <h3 data-fr="Prendre un rendez-vous" data-en="Book an Appointment">Prendre un rendez-vous</h3>
-          <p class="hero-form-sub" data-fr="Nous vous contacterons pour confirmer." data-en="We will contact you to confirm.">Nous vous contacterons pour confirmer.</p>
-          <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
-
-            <div class="form-group">
-              <label data-fr="Nom *" data-en="Name *">Nom *</label>
-              <input type="text" id="f-name" required placeholder="Jean Tremblay" />
-            </div>
-
-            <div class="form-group">
-              <label data-fr="Courriel *" data-en="Email *">Courriel *</label>
-              <input type="email" id="f-email" required placeholder="exemple@email.com" />
-            </div>
-
-            <div class="form-group">
-              <label data-fr="Téléphone *" data-en="Phone *">Téléphone *</label>
-              <input type="tel" id="f-phone" required placeholder="514-000-0000" />
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full" data-fr="Envoyer la demande" data-en="Send Request">Envoyer la demande</button>
-          </form>
+          <h3 data-fr="Estimation rapide" data-en="Quick Estimate">Estimation rapide</h3>
+          <p class="hero-form-sub" data-fr="Envoyez-nous par texto les informations suivantes :" data-en="Text us the following information:">Envoyez-nous par texto les informations suivantes :</p>
+          <ul class="estimation-list">
+            <li data-fr="Votre nom" data-en="Your name">Votre nom</li>
+            <li data-fr="Votre courriel" data-en="Your email">Votre courriel</li>
+            <li data-fr="Photo(s) des dommages" data-en="Photo(s) of the damage">Photo(s) des dommages</li>
+            <li data-fr="Photo du numéro de série" data-en="Photo of the serial number">Photo du numéro de série</li>
+          </ul>
+          <a href="sms:5142742537" class="btn btn-primary btn-full estimation-cta">514-274-2537</a>
+          <p class="estimation-note" data-fr="Nous vous répondrons dans les plus brefs délais." data-en="We will get back to you as soon as possible.">Nous vous répondrons dans les plus brefs délais.</p>
         </div>
       </div>
 
@@ -87,8 +77,8 @@
         <div class="card">
           <div class="card-icon">01</div>
           <h3 data-fr="Réparation de carrosserie" data-en="Body Repair">Réparation de carrosserie</h3>
-          <p data-fr="Remise en état complète après collision, accidents ou dommages. Résultats impeccables et durables." data-en="Full restoration after collisions, accidents or damage. Flawless and lasting results.">
-            Remise en état complète après collision, accidents ou dommages. Résultats impeccables et durables.
+          <p data-fr="Remise en état complète après collision. Résultats impeccables et garanties." data-en="Full restoration after collision. Flawless and guaranteed results.">
+            Remise en état complète après collision. Résultats impeccables et garanties.
           </p>
         </div>
 
@@ -102,9 +92,9 @@
 
         <div class="card">
           <div class="card-icon">03</div>
-          <h3 data-fr="Débosselage" data-en="Dent Removal">Débosselage</h3>
-          <p data-fr="Élimination des bosses et déformations sans compromettre la peinture existante. Technique experte." data-en="Removal of dents and deformations without affecting existing paint. Expert technique.">
-            Élimination des bosses et déformations sans compromettre la peinture existante. Technique experte.
+          <h3 data-fr="Débosselage sans peinture" data-en="Paintless Dent Removal">Débosselage sans peinture</h3>
+          <p data-fr="Élimination des bosses et déformations sans compromettre la peinture existante. Technique experte et à coût réduit." data-en="Removal of dents and deformations without affecting existing paint. Expert technique at much lower cost.">
+            Élimination des bosses et déformations sans compromettre la peinture existante. Technique experte et à coût réduit.
           </p>
         </div>
 
@@ -132,27 +122,14 @@
             <span class="stat-num">3</span>
             <span class="stat-label" data-fr="Services spécialisés" data-en="Specialized services">Services spécialisés</span>
           </div>
-          <div class="stat">
-            <span class="stat-num">100%</span>
-            <span class="stat-label" data-fr="Satisfaction client" data-en="Client satisfaction">Satisfaction client</span>
-          </div>
         </div>
       </div>
       <div class="about-img">
-        <img src="car-about.jpg" alt="Véhicule Crémazie Auto" class="about-car-img" />
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-3e5688be-56ac-4c23-a773-a505dda3f3a5" data-elfsight-app-lazy></div>
       </div>
     </div>
   </section>
-
-  <!-- CONFIRMATION MODAL -->
-  <div class="modal-overlay" id="modal" onclick="closeModal()">
-    <div class="modal-box" onclick="event.stopPropagation()">
-      <div class="modal-icon">✅</div>
-      <h3 id="modal-title">Rendez-vous confirmé !</h3>
-      <p id="modal-body"></p>
-      <button class="btn btn-primary" onclick="closeModal()" data-fr="Fermer" data-en="Close">Fermer</button>
-    </div>
-  </div>
 
   <!-- CONTACT -->
   <section class="contact section" id="contact">
@@ -190,8 +167,8 @@
         <div class="map-container">
           <iframe
             title="Crémazie Auto"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.0!2d-73.6509!3d45.4939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9194ecc7c9b4f%3A0x0!2s5441+Av.+Royalmount%2C+Montr%C3%A9al%2C+QC+H4P+2J8!5e0!3m2!1sfr!2sca!4v1"
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            src="https://maps.google.com/maps?q=Cr%C3%A9mazie+Auto+Carrosserie+5441+Av+Royalmount+Montreal+QC&z=18&output=embed"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
           </iframe>
         </div>
       </div>
@@ -206,7 +183,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
