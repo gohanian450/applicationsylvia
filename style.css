@@ -467,7 +467,7 @@ h2 {
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hamburger { display: block; }
-  .nav-phone { display: none; }
+  .nav-phone-num { font-size: 0.8rem; letter-spacing: 0; }
 
   .hero-inner { grid-template-columns: 1fr; gap: 36px; }
   .hero { min-height: auto; padding: 48px 0; }
