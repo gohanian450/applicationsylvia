@@ -139,6 +139,7 @@ h2 {
   align-items: center;
   background: url('hero-bg.jpg') center/cover no-repeat, var(--grey);
   background-color: #1a1a1a;
+  padding: 60px 0;
 }
 
 .hero-overlay {
@@ -147,16 +148,22 @@ h2 {
   background: linear-gradient(135deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 100%);
 }
 
-.hero-content {
+.hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 680px;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
 }
 
+.hero-content { max-width: 560px; }
+
 .hero-logo {
-  height: 140px;
+  height: 120px;
   object-fit: contain;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   display: block;
   filter: drop-shadow(0 4px 16px rgba(0,0,0,0.6)) brightness(1.1);
 }
@@ -175,7 +182,7 @@ h2 {
 }
 
 .hero-content h1 {
-  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
   font-weight: 900;
   color: var(--white);
   line-height: 1.1;
@@ -184,16 +191,30 @@ h2 {
 
 .hero-sub {
   color: #ccc;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 36px;
-  max-width: 520px;
+  margin-bottom: 32px;
 }
 
-.hero-btns {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+/* Hero form card */
+.hero-form-box {
+  background: rgba(255,255,255,0.97);
+  border-radius: 16px;
+  padding: 36px 32px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.45);
+}
+
+.hero-form-box h3 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.hero-form-sub {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin-bottom: 24px;
 }
 
 .btn {
@@ -387,21 +408,6 @@ h2 {
 }
 .nav-book:hover { background: #a0001a !important; color: var(--white) !important; }
 
-/* ===== BOOKING ===== */
-.booking { background: var(--light-grey); }
-
-.booking-simple {
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.book-step {
-  background: var(--white);
-  border-radius: 12px;
-  padding: 36px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-}
-
 /* Booking form */
 .booking-form { display: flex; flex-direction: column; gap: 20px; }
 
@@ -479,13 +485,14 @@ h2 {
   .nav-links { display: none; }
   .hamburger { display: block; }
 
+  .hero-inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero { min-height: auto; padding: 48px 0; }
+
   .about-inner { grid-template-columns: 1fr; gap: 40px; }
   .about-img { order: -1; }
   .img-placeholder { font-size: 4rem; }
 
   .contact-grid { grid-template-columns: 1fr; }
-
-  .hero { min-height: 75vh; }
 
   .section { padding: 60px 0; }
 

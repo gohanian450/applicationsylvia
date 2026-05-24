@@ -34,19 +34,48 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="booking">
     <div class="hero-overlay"></div>
-    <div class="hero-content container">
-      <img src="logo.png" alt="Crémazie Auto" class="hero-logo" onerror="this.style.display='none'" />
-      <p class="hero-badge" data-fr="Plus de 50 ans d'expérience" data-en="Over 50 years of experience">Plus de 50 ans d'expérience</p>
-      <h1 data-fr="Experts en carrosserie automobile" data-en="Auto Body Repair Experts">Experts en carrosserie automobile</h1>
-      <p class="hero-sub" data-fr="Réparation professionnelle, peinture et débosselage à Montréal depuis plus de 50 ans." data-en="Professional repair, painting and dent removal in Montreal for over 50 years.">
-        Réparation professionnelle, peinture et débosselage à Montréal depuis plus de 50 ans.
-      </p>
-      <div class="hero-btns">
-        <a href="#booking" class="btn btn-primary" data-fr="Prendre un rendez-vous" data-en="Book an Appointment">Prendre un rendez-vous</a>
+    <div class="hero-inner container">
+
+      <!-- Texte gauche -->
+      <div class="hero-content">
+        <img src="logo.png" alt="Crémazie Auto" class="hero-logo" onerror="this.style.display='none'" />
+        <p class="hero-badge" data-fr="Plus de 50 ans d'expérience" data-en="Over 50 years of experience">Plus de 50 ans d'expérience</p>
+        <h1 data-fr="Experts en carrosserie automobile" data-en="Auto Body Repair Experts">Experts en carrosserie automobile</h1>
+        <p class="hero-sub" data-fr="Réparation professionnelle, peinture et débosselage à Montréal depuis plus de 50 ans." data-en="Professional repair, painting and dent removal in Montreal for over 50 years.">
+          Réparation professionnelle, peinture et débosselage à Montréal depuis plus de 50 ans.
+        </p>
         <a href="#services" class="btn btn-outline" data-fr="Nos services" data-en="Our Services">Nos services</a>
       </div>
+
+      <!-- Formulaire droite -->
+      <div class="hero-form">
+        <div class="hero-form-box">
+          <h3 data-fr="Prendre un rendez-vous" data-en="Book an Appointment">Prendre un rendez-vous</h3>
+          <p class="hero-form-sub" data-fr="Nous vous contacterons pour confirmer." data-en="We will contact you to confirm.">Nous vous contacterons pour confirmer.</p>
+          <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
+
+            <div class="form-group">
+              <label data-fr="Nom *" data-en="Name *">Nom *</label>
+              <input type="text" id="f-name" required placeholder="Jean Tremblay" />
+            </div>
+
+            <div class="form-group">
+              <label data-fr="Courriel *" data-en="Email *">Courriel *</label>
+              <input type="email" id="f-email" required placeholder="exemple@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label data-fr="Téléphone *" data-en="Phone *">Téléphone *</label>
+              <input type="tel" id="f-phone" required placeholder="514-000-0000" />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" data-fr="Envoyer la demande" data-en="Send Request">Envoyer la demande</button>
+          </form>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -115,40 +144,6 @@
       </div>
       <div class="about-img">
         <img src="car-about.jpg" alt="Véhicule Crémazie Auto" class="about-car-img" />
-      </div>
-    </div>
-  </section>
-
-  <!-- BOOKING -->
-  <section class="booking section" id="booking">
-    <div class="container">
-      <h2 data-fr="Prendre un rendez-vous" data-en="Book an Appointment">Prendre un rendez-vous</h2>
-      <p class="section-sub" data-fr="Remplissez le formulaire et nous vous contacterons pour confirmer votre rendez-vous." data-en="Fill out the form and we will contact you to confirm your appointment.">
-        Remplissez le formulaire et nous vous contacterons pour confirmer votre rendez-vous.
-      </p>
-
-      <div class="booking-simple">
-        <div class="book-step">
-          <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
-
-            <div class="form-group">
-              <label data-fr="Nom *" data-en="Name *">Nom *</label>
-              <input type="text" id="f-name" required placeholder="Jean Tremblay" />
-            </div>
-
-            <div class="form-group">
-              <label data-fr="Courriel *" data-en="Email *">Courriel *</label>
-              <input type="email" id="f-email" required placeholder="exemple@email.com" />
-            </div>
-
-            <div class="form-group">
-              <label data-fr="Téléphone *" data-en="Phone *">Téléphone *</label>
-              <input type="tel" id="f-phone" required placeholder="514-000-0000" />
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full" data-fr="Envoyer la demande" data-en="Send Request">Envoyer la demande</button>
-          </form>
-        </div>
       </div>
     </div>
   </section>
