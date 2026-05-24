@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crémazie Auto — Carrosserie Montréal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+        <img src="logo.png" alt="Crémazie Auto" onerror="this.style.display='none'; document.getElementById('logo-text').style.display='block'" />
+        <span id="logo-text" class="logo-text" style="display:none;">Crémazie Auto</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#services" data-fr="Services" data-en="Services">Services</a>
+        <a href="#about" data-fr="À propos" data-en="About">À propos</a>
+        <a href="#booking" class="nav-book" data-fr="Rendez-vous" data-en="Book Now">Rendez-vous</a>
+        <a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
+      </nav>
+      <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">EN</button>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger">&#9776;</button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#services" onclick="toggleMenu()" data-fr="Services" data-en="Services">Services</a>
+      <a href="#about" onclick="toggleMenu()" data-fr="À propos" data-en="About">À propos</a>
+      <a href="#booking" onclick="toggleMenu()" data-fr="Rendez-vous" data-en="Book Now">Rendez-vous</a>
+      <a href="#contact" onclick="toggleMenu()" data-fr="Contact" data-en="Contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <img src="logo.png" alt="Crémazie Auto" class="hero-logo" onerror="this.style.display='none'" />
+      <p class="hero-badge" data-fr="Plus de 50 ans d'expérience" data-en="Over 50 years of experience">Plus de 50 ans d'expérience</p>
+      <h1 data-fr="Experts en carrosserie automobile" data-en="Auto Body Repair Experts">Experts en carrosserie automobile</h1>
+      <p class="hero-sub" data-fr="Réparation professionnelle, peinture et débosselage à Montréal depuis plus de 50 ans." data-en="Professional repair, painting and dent removal in Montreal for over 50 years.">
+        Réparation professionnelle, peinture et débosselage à Montréal depuis plus de 50 ans.
+      </p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn btn-primary" data-fr="Prendre un rendez-vous" data-en="Book an Appointment">Prendre un rendez-vous</a>
+        <a href="#services" class="btn btn-outline" data-fr="Nos services" data-en="Our Services">Nos services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <h2 data-fr="Nos Services" data-en="Our Services">Nos Services</h2>
+      <p class="section-sub" data-fr="Un travail de qualité, garanti par des décennies de savoir-faire." data-en="Quality work, guaranteed by decades of expertise.">
+        Un travail de qualité, garanti par des décennies de savoir-faire.
+      </p>
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-icon">🔧</div>
+          <h3 data-fr="Réparation de carrosserie" data-en="Body Repair">Réparation de carrosserie</h3>
+          <p data-fr="Remise en état complète après collision, accidents ou dommages. Résultats impeccables et durables." data-en="Full restoration after collisions, accidents or damage. Flawless and lasting results.">
+            Remise en état complète après collision, accidents ou dommages. Résultats impeccables et durables.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🎨</div>
+          <h3 data-fr="Peinture automobile" data-en="Auto Painting">Peinture automobile</h3>
+          <p data-fr="Peinture de précision avec correspondance parfaite des couleurs d'origine. Fini professionnel garanti." data-en="Precision painting with perfect original colour matching. Professional finish guaranteed.">
+            Peinture de précision avec correspondance parfaite des couleurs d'origine. Fini professionnel garanti.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🔨</div>
+          <h3 data-fr="Débosselage" data-en="Dent Removal">Débosselage</h3>
+          <p data-fr="Élimination des bosses et déformations sans compromettre la peinture existante. Technique experte." data-en="Removal of dents and deformations without affecting existing paint. Expert technique.">
+            Élimination des bosses et déformations sans compromettre la peinture existante. Technique experte.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2 data-fr="Plus de 50 ans de confiance" data-en="Over 50 Years of Trust">Plus de 50 ans de confiance</h2>
+        <p data-fr="Fondée il y a plus d'un demi-siècle, Crémazie Auto s'est bâti une réputation solide à Montréal grâce à un travail soigné, une clientèle fidèle et des résultats qui parlent d'eux-mêmes." data-en="Founded over half a century ago, Crémazie Auto has built a solid reputation in Montreal through careful work, loyal clients and results that speak for themselves.">
+          Fondée il y a plus d'un demi-siècle, Crémazie Auto s'est bâti une réputation solide à Montréal grâce à un travail soigné, une clientèle fidèle et des résultats qui parlent d'eux-mêmes.
+        </p>
+        <p data-fr="Notre équipe de techniciens qualifiés utilise les meilleures techniques et équipements pour remettre votre véhicule dans son état d'origine — ou mieux encore." data-en="Our team of qualified technicians uses the best techniques and equipment to restore your vehicle to its original condition — or better.">
+          Notre équipe de techniciens qualifiés utilise les meilleures techniques et équipements pour remettre votre véhicule dans son état d'origine — ou mieux encore.
+        </p>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-num">50+</span>
+            <span class="stat-label" data-fr="Ans d'expérience" data-en="Years of experience">Ans d'expérience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label" data-fr="Services spécialisés" data-en="Specialized services">Services spécialisés</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label" data-fr="Satisfaction client" data-en="Client satisfaction">Satisfaction client</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="car-about.jpg" alt="Véhicule Crémazie Auto" class="about-car-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking section" id="booking">
+    <div class="container">
+      <h2 data-fr="Prendre un rendez-vous" data-en="Book an Appointment">Prendre un rendez-vous</h2>
+      <p class="section-sub" data-fr="Choisissez votre méthode, sélectionnez une date et remplissez vos informations." data-en="Choose your method, select a date and fill in your information.">
+        Choisissez votre méthode, sélectionnez une date et remplissez vos informations.
+      </p>
+
+      <div class="booking-grid">
+
+        <!-- LEFT COLUMN -->
+        <div class="booking-left">
+
+          <!-- STEP 1: METHOD -->
+          <div class="book-step">
+            <h3 class="step-title" data-fr="1. Sélectionner une méthode" data-en="1. Select A Method">1. Sélectionner une méthode</h3>
+            <div class="method-cards">
+              <div class="method-card" id="method-location" onclick="selectMethod('location')">
+                <span class="method-icon">📍</span>
+                <div>
+                  <strong data-fr="Sur place" data-en="On Location">Sur place</strong>
+                  <p data-fr="Rendez-vous à notre atelier." data-en="Appointment at the supplier location.">Rendez-vous à notre atelier.</p>
+                </div>
+              </div>
+              <div class="method-card" id="method-photo" onclick="selectMethod('photo')">
+                <span class="method-icon">📷</span>
+                <div>
+                  <strong data-fr="Évaluation par photo" data-en="Photo Appraisal">Évaluation par photo</strong>
+                  <p data-fr="Vous recevrez une invitation par courriel pour soumettre vos photos." data-en="You will receive an email invitation to guide you in submitting pictures.">Vous recevrez une invitation par courriel pour soumettre vos photos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: CALENDAR -->
+          <div class="book-step">
+            <h3 class="step-title" data-fr="2. Sélectionner une date" data-en="2. Select A Date">2. Sélectionner une date</h3>
+            <div class="calendar-wrap">
+              <div class="cal-header">
+                <button class="cal-nav" onclick="prevMonth()">&#8592;</button>
+                <span id="cal-title"></span>
+                <button class="cal-nav" onclick="nextMonth()">&#8594;</button>
+              </div>
+              <div class="cal-grid" id="cal-grid"></div>
+            </div>
+          </div>
+
+          <!-- STEP 3: TIME SLOTS -->
+          <div class="book-step">
+            <h3 class="step-title" data-fr="3. Sélectionner une heure" data-en="3. Select A Time">3. Sélectionner une heure</h3>
+            <p class="time-hint" id="time-hint" data-fr="Veuillez d'abord sélectionner une date." data-en="You must select a date first.">Veuillez d'abord sélectionner une date.</p>
+            <div class="time-slots" id="time-slots"></div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN: FORM -->
+        <div class="booking-right">
+          <div class="book-step">
+            <h3 class="step-title" data-fr="4. Vos informations" data-en="4. Your Contact Info">4. Vos informations</h3>
+            <form class="booking-form" id="booking-form" onsubmit="submitBooking(event)">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label data-fr="Nom *" data-en="My name *">Nom *</label>
+                  <input type="text" id="f-name" required placeholder="Jean Tremblay" />
+                </div>
+                <div class="form-group">
+                  <label data-fr="Véhicule *" data-en="My vehicle *">Véhicule *</label>
+                  <input type="text" id="f-vehicle" required placeholder="2020 Honda Civic" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label data-fr="Courriel" data-en="My email">Courriel</label>
+                  <input type="email" id="f-email" placeholder="exemple@email.com" />
+                </div>
+                <div class="form-group">
+                  <label data-fr="Téléphone *" data-en="My phone *">Téléphone *</label>
+                  <input type="tel" id="f-phone" required placeholder="514-000-0000" />
+                </div>
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" id="f-sms" />
+                <label for="f-sms" data-fr="Autoriser les messages texte (cellulaire)." data-en="Allow text messages (cell phone).">Autoriser les messages texte (cellulaire).</label>
+              </div>
+
+              <div class="form-divider" data-fr="Informations d'assurance (optionnel)" data-en="Insurance Info (optional)">Informations d'assurance (optionnel)</div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label data-fr="Compagnie d'assurance" data-en="Insurance Co.">Compagnie d'assurance</label>
+                  <input type="text" id="f-insurance" placeholder="Ex: Intact, Desjardins..." />
+                </div>
+                <div class="form-group">
+                  <label data-fr="Numéro de police" data-en="Policy #">Numéro de police</label>
+                  <input type="text" id="f-policy" placeholder="POL-000000" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label data-fr="Numéro de réclamation" data-en="Claim #">Numéro de réclamation</label>
+                <input type="text" id="f-claim" placeholder="CLM-000000" />
+              </div>
+
+              <div class="form-group">
+                <label data-fr="Commentaire" data-en="Comment">Commentaire</label>
+                <textarea id="f-comment" rows="4" placeholder="Décrivez les dommages ou ajoutez des détails..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" data-fr="Confirmer le rendez-vous" data-en="Confirm Appointment">Confirmer le rendez-vous</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="modal" onclick="closeModal()">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-icon">✅</div>
+      <h3 id="modal-title">Rendez-vous confirmé !</h3>
+      <p id="modal-body"></p>
+      <button class="btn btn-primary" onclick="closeModal()" data-fr="Fermer" data-en="Close">Fermer</button>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <h2 data-fr="Contactez-nous" data-en="Contact Us">Contactez-nous</h2>
+      <p class="section-sub" data-fr="Nous sommes là pour vous aider. N'hésitez pas à nous appeler ou à venir nous voir." data-en="We're here to help. Don't hesitate to call us or come see us.">
+        Nous sommes là pour vous aider. N'hésitez pas à nous appeler ou à venir nous voir.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong data-fr="Téléphone" data-en="Phone">Téléphone</strong>
+              <a href="tel:5142742537">514-274-2537</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong data-fr="Adresse" data-en="Address">Adresse</strong>
+              <span>5441 Av. Royalmount<br />Montréal, QC H4P 2J8</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🕐</span>
+            <div>
+              <strong data-fr="Heures d'ouverture" data-en="Business Hours">Heures d'ouverture</strong>
+              <span data-fr="Lun–Jeu : 8h00 – 17h00<br/>Vendredi : 8h00 – 14h00<br/>Sam–Dim : Fermé" data-en="Mon–Thu: 8:00 AM – 5:00 PM<br/>Friday: 8:00 AM – 2:00 PM<br/>Sat–Sun: Closed">
+                Lun–Jeu : 8h00 – 17h00<br/>Vendredi : 8h00 – 14h00<br/>Sam–Dim : Fermé
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            title="Crémazie Auto"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.0!2d-73.6509!3d45.4939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9194ecc7c9b4f%3A0x0!2s5441+Av.+Royalmount%2C+Montr%C3%A9al%2C+QC+H4P+2J8!5e0!3m2!1sfr!2sca!4v1"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Crémazie Auto. <span data-fr="Tous droits réservés." data-en="All rights reserved.">Tous droits réservés.</span></p>
+      <p>5441 Av. Royalmount, Montréal, QC H4P 2J8 — <a href="tel:5142742537">514-274-2537</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
